@@ -7,6 +7,8 @@
 // Follow all input instructions OR
 // Count # times dial is left pointing at 0 after any rotation
 
+// Local use: gcc -o day1 "main.c"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,13 +24,12 @@ int main() {
       while (input != NULL) {
             fgets(line, sizeof(line), input);
             // TO FIX: Currently gets an instruction then subsequently a new line
-            if (line[0] == EOF) {
+            if (fgets(line, sizeof(line), input) == EOF) {
                   break; // leave loop
             }
             printf("Instruction: %s\n", line); // debugging
             fseek(input, sizeof(line) - 4, SEEK_CUR);
       }
-
       fclose(input); // close file
       return 0;
 }
