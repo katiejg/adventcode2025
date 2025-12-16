@@ -1,4 +1,6 @@
 // Advent of Code 2025 Day 1
+// This doesn't work LOL i'll fix it maybe one day
+// I just did it in python
 // 0-99
 // L = left, R = right
 // Circle (right from 99 -> 0, left from 0 -> 99)
